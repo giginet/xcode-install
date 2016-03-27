@@ -4,7 +4,6 @@ module XcodeInstall
   describe Command::Uninstall do
     describe 'when invoked' do
       it 'raise error when the version is not specified' do
-        Command::Uninstall.any_instance.expects(:help!)
         -> { Command::Uninstall.run([]) }.should.raise(SystemExit)
       end
     end
